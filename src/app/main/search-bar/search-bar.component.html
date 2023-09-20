@@ -1,0 +1,14 @@
+<form id="searchForm" #searchForm="ngForm" (ngSubmit)="onSubmit()" novalidate>
+  <div class="search-container">
+    <input
+      type="text"
+      [(ngModel)]="searchTerm"
+      class="txt-input"
+      name="text-field"
+      placeholder="Search..."
+    />
+    <button type="submit" class="btn-submit">
+      <span class="material-icons">search</span>
+    </button>
+  </div>
+</form>

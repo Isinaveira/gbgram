@@ -1,0 +1,28 @@
+<div #imageContainer class="card-container">
+  <div class="image-wrapper">
+    <div class="image-inner">
+        <img [src]="imageObject.urls.regular" [alt]="imageObject.alt_description" />
+        <div class="image-description">
+          <p> "{{imageObject.alt_description | titlecase }}"</p>
+        </div>
+    </div>
+  </div>
+  <div class="info-container">
+    <div *ngIf="showLikes" class="likes-container flx-rw-left">
+    <span class="material-icons">favorite</span>
+    <p class="text-font fw-medium">{{ imageObject.likes }}</p>
+    </div>
+    <div *ngIf="showUser" class="username-container flx-rw-left">
+      <div class="profile-pic-container">
+        <img
+          [src]="imageObject.user.profile_image.small"
+          class="profile-pic"
+          alt="profile pic"
+        />
+      </div>
+      <p class="username text-font fw-medium">
+        {{ imageObject.user.username }}
+      </p>
+    </div>
+  </div>
+</div>

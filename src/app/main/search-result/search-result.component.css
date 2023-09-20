@@ -1,0 +1,14 @@
+.results-container{
+    display: grid;
+    place-content: center;
+}
+.results-grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 50px;
+}
+
+
+li{
+    list-style: none;
+}

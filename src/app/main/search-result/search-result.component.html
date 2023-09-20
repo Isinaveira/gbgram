@@ -1,0 +1,7 @@
+<div class="results-container">
+    <ul class="results-grid">
+        <li *ngFor="let image of images">
+            <photo-card [imageObject]="image" [showUser]="true" [showLikes]="true" [height]="1024" [width]="768"></photo-card>
+        </li>
+    </ul>
+</div>

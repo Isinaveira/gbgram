@@ -1,0 +1,85 @@
+.card-container{
+    padding: 20px;
+    background-color: rgb(228, 228, 228);
+    box-shadow: 5px 5px 30px rgb(179, 179, 179);
+    border-radius: 10px;
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+}
+.card-container:hover{
+    transform: scale(1.1);
+}
+
+.image-description {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8); /* Color de fondo con transparencia */
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    font-size: 1.1em;
+    color: black;
+    opacity: 0; /* Inicialmente oculta la descripción */
+    transition: opacity 0.3s ease-in-out; /* Agrega una transición suave de opacidad */
+    backdrop-filter: blur(8px); /* Aplica un efecto de desenfoque al fondo */
+}
+
+.image-inner:hover .image-description {
+    opacity: 1; /* Muestra la descripción al hacer hover */
+}
+
+.profile-pic-container {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    border: solid 2px rgb(110, 110, 110);
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+ }
+ 
+ .profile-pic {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+ }
+ 
+ .image-wrapper {
+
+    width: 100%;
+    max-width: 300px;
+    height: auto; 
+    display: flex;
+    justify-content: center;
+    overflow: hidden; 
+ }
+ 
+ .image-inner {
+    max-height: 300px;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+ .image-inner img {
+    max-width: none;
+    max-height: none; 
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+ }
+ .info-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+ }
+
