@@ -9,7 +9,7 @@
 .main-container > .description {
     font-size: 1.3rem;
 }
-.main-container > app-search-bar {
+.main-container > search-bar {
     width: 70%;
     max-width: 650px;
 }

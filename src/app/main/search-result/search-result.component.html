@@ -1,7 +1,24 @@
+<navbar></navbar>
 <div class="results-container">
-    <ul class="results-grid">
-        <li *ngFor="let image of images">
-            <photo-card [imageObject]="image" [showUser]="true" [showLikes]="true" [height]="1024" [width]="768"></photo-card>
-        </li>
-    </ul>
+  <router-outlet></router-outlet>
+  <h2 class="text-font">Searched: {{ searchTerm }}</h2>
+  <ul class="results-grid">
+    <li *ngFor="let image of images">
+      <photo-card
+        [imageObject]="image"
+        [showUser]="true"
+        [showLikes]="true"
+        [height]="1024"
+        [width]="768"
+      ></photo-card>
+    </li>
+  </ul>
+  <button
+    #scrollButton
+    class="scroll-to-top"
+    *ngIf="showScrollButton"
+    (click)="scrollToTop()"
+  >
+    <span class="material-icons">keyboard_arrow_up</span>
+  </button>
 </div>

@@ -8,6 +8,7 @@ import { FormsModule} from '@angular/forms';
 import { SearchResultComponent } from './search-result/search-result.component';
 import { PhotoCardComponent } from './photo-card/photo-card.component';
 import { PhotoDetailsComponent } from './photo-details/photo-details.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { PhotoDetailsComponent } from './photo-details/photo-details.component';
     HomeComponent,
     SearchResultComponent,
     PhotoCardComponent,
-    PhotoDetailsComponent
+    PhotoDetailsComponent,
+    NavbarComponent
   ],
   imports: [
     CommonModule,

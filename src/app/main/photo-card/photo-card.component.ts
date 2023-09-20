@@ -5,7 +5,7 @@ import { ImageData } from 'src/app/models/ImageData';
   templateUrl: './photo-card.component.html',
   styleUrls: ['./photo-card.component.css']
 })
-export class PhotoCardComponent implements OnInit {
+export class PhotoCardComponent  {
   
   @ViewChild('imageContainer', {static: false})
   protected imageContainer!: ElementRef;
@@ -20,7 +20,4 @@ export class PhotoCardComponent implements OnInit {
   imageData: any;
   imageUrl!: string;
 
-  ngOnInit(): void {
-    console.log(this.imageObject.user)
-  }
 }

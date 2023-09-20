@@ -4,6 +4,10 @@
     font-family: 'Roboto', sans-serif;
 }
 
+.no-text-dc{
+    text-decoration: none;
+}
+
 .fw-light{
     font-weight: 100;
 }
@@ -21,11 +25,13 @@ html{
     width: 100%;
     background-color: rgb(238, 236, 236);
     color: black
+    
 }
 
 body{
     height:  100%;
     width: 100%;
+    overflow-x: hidden;
 }
 
 h1{
