@@ -1,28 +1,23 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { MainRoutingModule } from './main-routing.module';
-import { SearchBarComponent } from './search-bar/search-bar.component';
 import { HomeComponent } from './home/home.component';
 import { FormsModule} from '@angular/forms';
 import { SearchResultComponent } from './search-result/search-result.component';
 import { PhotoCardComponent } from './photo-card/photo-card.component';
-import { PhotoDetailsComponent } from './photo-details/photo-details.component';
-import { NavbarComponent } from './navbar/navbar.component';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
-    SearchBarComponent,
     HomeComponent,
     SearchResultComponent,
-    PhotoCardComponent,
-    PhotoDetailsComponent,
-    NavbarComponent
+    PhotoCardComponent
   ],
   imports: [
     CommonModule,
     MainRoutingModule,
-    FormsModule
-  ]
+    FormsModule,
+    SharedModule
+  ],
 })
 export class MainModule { }

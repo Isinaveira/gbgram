@@ -22,6 +22,7 @@ export interface ImageData {
   user: {
     username: string;
     name: string;
+    location: string;
     profile_image: {
       small: string;
       medium: string;

@@ -1,4 +1,4 @@
-<div #imageContainer class="card-container">
+<div #imageContainer class="card-container" (click)="navigateToPhotoDetails(imageObject)">
   <div class="image-wrapper">
     <div class="image-inner">
         <img [src]="imageObject.urls.regular" [alt]="imageObject.alt_description" />

@@ -10,9 +10,18 @@
 
 
 
-li{
-    list-style: none;
+li {
+  list-style: none;
+  opacity: 0; /* Comienza con una opacidad de 0 para ocultar los elementos */
+  transform: translateY(20px); /* Puedes ajustar la distancia de desplazamiento */
+  transition: opacity 0.5s ease-in, transform 0.5s ease-in; /* Agrega la transición ease-in */
 }
+
+li.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 
 .scroll-to-top {
     position: fixed;

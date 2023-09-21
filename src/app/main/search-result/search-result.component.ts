@@ -66,7 +66,8 @@ export class SearchResultComponent {
               }));
 
             }else{
-              this.images = [...this.images, ...data.results.map((image: ImageData) => ({
+
+              const newImages = data.results.map((image: ImageData) => ({
                 id: image.id,
                 created_at: image.created_at,
                 width: image.width,
@@ -79,7 +80,9 @@ export class SearchResultComponent {
                 likes: image.likes,
                 user: image.user,
                 tags: image.tags
-              }))]
+              }))
+              this.images = [...this.images, ...newImages];
+              this.applyFadeInToNewItems(newImages);
             }
           },
           error: (error) => {
@@ -105,10 +108,21 @@ export class SearchResultComponent {
     }
     
     if(this.currentPage < this.total_pages && this.isAtBottom()){
+      console.log("ABAJO")
       this.currentPage ++;
       this.searchImages(this.currentPage);
     }
 
+  }
+
+  applyFadeInToNewItems(newItems: any[]) {
+    // Obtén la lista de elementos <li> recién agregados
+    const listItems = document.querySelectorAll('.results-grid li');
+  
+    // Aplica la clase .fade-in a los elementos recién agregados
+    newItems.forEach((_, index) => {
+      listItems[this.images.length - newItems.length + index].classList.add('fade-in');
+    });
   }
 
   scrollToTop() {
@@ -120,7 +134,14 @@ export class SearchResultComponent {
 
   isAtBottom(): boolean {
     const element = this.el.nativeElement;
-    return (window.innerHeight + window.scrollY) >= element.offsetHeight;
+    const windowHeight = window.innerHeight;
+    const scrollY = window.scrollY;
+    const contentHeight = element.offsetHeight;
+
+    // Define a threshold (e.g., 100 pixels) to trigger the load more action
+    const threshold = 100;
+
+    return windowHeight + scrollY >= contentHeight - threshold;
   }
 
 

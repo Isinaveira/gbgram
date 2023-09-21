@@ -1,0 +1,44 @@
+<div class="wrapper-details text-font">
+    <navbar></navbar>
+    <h2 class="image-title">{{imageObject.alt_description | titlecase }}</h2>
+    <div class="photo-details-container">
+        <div class="photo-image-container">
+            <img class="image" *ngIf="imageObject" [src]="imageObject.urls.full" alt="imageObject.alt_description">
+        </div>
+        <div class="info-actions-container">
+            <div class="info-container">
+                <div class="user_info info-box">
+                    <img [src]="imageObject.user.profile_image.small" alt="">
+                    <p class="text-font">{{imageObject.user.username}}</p>
+                </div>
+                <div class="photo-info info-box">
+                    <p>Author: {{imageObject.user.name}}</p>
+                    <p>Description: {{imageObject.alt_description}}</p>
+                    <p>Location: {{imageObject.user.location}}</p>
+                    <p>{{imageObject.created_at | date }}</p>
+                    <p>Size: {{imageObject.height}}x{{imageObject.width}}</p>
+                </div>
+                <div class="tags-container text-font">
+                    <p>Tags:</p>
+                    <div class="tag" *ngFor="let tag of imageObject.tags">
+                        <span class="material-icons">label</span>
+                        <p>{{ tag.title }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="actions-container">
+                <div class="likes-container">
+                    <span class="material-icons">favorite</span>
+                    <p>{{imageObject.likes}} likes</p>
+                </div>
+                <div class="buttons-container">
+                    <button class="btn text-font" (click)="goBack()"><span class="material-icons">arrow_back_ios_new</span>Go Back</button>
+                    <a class="no-text-dc" [href]="imageObject.links.download" download="imagen.jpg">
+                        <button class="btn text-font"><span class="material-icons">expand</span>See full size</button>
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>

@@ -3,7 +3,7 @@
   <router-outlet></router-outlet>
   <h2 class="text-font">Searched: {{ searchTerm }}</h2>
   <ul class="results-grid">
-    <li *ngFor="let image of images">
+    <li *ngFor="let image of images" class="fade-in">
       <photo-card
         [imageObject]="image"
         [showUser]="true"
