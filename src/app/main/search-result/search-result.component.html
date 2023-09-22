@@ -1,24 +1,26 @@
-<navbar></navbar>
-<div class="results-container">
-  <router-outlet></router-outlet>
-  <h2 class="text-font">Searched: {{ searchTerm }}</h2>
-  <ul class="results-grid">
-    <li *ngFor="let image of images" class="fade-in">
-      <photo-card
-        [imageObject]="image"
-        [showUser]="true"
-        [showLikes]="true"
-        [height]="1024"
-        [width]="768"
-      ></photo-card>
-    </li>
-  </ul>
-  <button
-    #scrollButton
-    class="scroll-to-top"
-    *ngIf="showScrollButton"
-    (click)="scrollToTop()"
-  >
-    <span class="material-icons">keyboard_arrow_up</span>
-  </button>
+<div class="search-result-container">
+  <navbar></navbar>
+  <div class="results-container">
+    <router-outlet></router-outlet>
+    <h2 class="text-font">Searched: {{ searchTerm }}</h2>
+    <ul class="results-grid">
+      <li *ngFor="let image of images" class="fade-in">
+        <photo-card
+          [imageObject]="image"
+          [showUser]="true"
+          [showLikes]="true"
+          [height]="1024"
+          [width]="768"
+        ></photo-card>
+      </li>
+    </ul>
+    <button
+      #scrollButton
+      class="scroll-to-top"
+      *ngIf="showScrollButton"
+      (click)="scrollToTop()"
+    >
+      <span class="material-icons">keyboard_arrow_up</span>
+    </button>
+  </div>
 </div>

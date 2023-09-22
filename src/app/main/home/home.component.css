@@ -13,3 +13,16 @@
     width: 70%;
     max-width: 650px;
 }
+
+@media screen and (max-width: 768px) {
+    
+    h1{
+        font-size: 6rem;
+    }
+
+    .description {
+        width: 90%;
+        text-align: center;
+    }
+    /* Ajustar otros estilos según sea necesario para dispositivos más pequeños */
+}

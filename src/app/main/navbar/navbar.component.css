@@ -4,6 +4,8 @@ nav{
     display: flex;
     flex-direction: row;
     align-items: center;
+    max-height: 80px;
+    gap: 20px;
 }
 nav > a{
     width: 15%;
@@ -11,4 +13,28 @@ nav > a{
 }
 nav > search-bar {
     width: 70%;
+}
+
+nav > h2 {
+    width: 100%;
+}
+
+@media screen and (max-width: 1300px) {
+    nav {
+        padding-left: 0;
+        padding-right: 0;
+        display: flex;
+        flex-direction: column;
+        max-height: 200px;
+    }   
+
+    a {
+        min-width: 100%;
+        text-align: center;
+    }
+
+    nav > search-bar {
+        width: 90%;
+    }
+    /* Ajustar otros estilos según sea necesario para dispositivos más pequeños */
 }

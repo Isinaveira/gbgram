@@ -81,3 +81,11 @@
 .btn-submit > span{
     font-size: 2rem;
 }
+
+
+@media screen and (max-width: 768px) {
+    .btn-submit{
+        padding: 0;
+    }
+    /* Ajustar otros estilos según sea necesario para dispositivos más pequeños */
+}

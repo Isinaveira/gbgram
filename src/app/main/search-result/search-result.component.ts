@@ -139,7 +139,7 @@ export class SearchResultComponent {
     const contentHeight = element.offsetHeight;
 
     // Define a threshold (e.g., 100 pixels) to trigger the load more action
-    const threshold = 100;
+    const threshold = 500;
 
     return windowHeight + scrollY >= contentHeight - threshold;
   }

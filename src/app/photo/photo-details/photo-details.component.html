@@ -17,6 +17,10 @@
                     <p>Location: {{imageObject.user.location}}</p>
                     <p>{{imageObject.created_at | date }}</p>
                     <p>Size: {{imageObject.height}}x{{imageObject.width}}</p>
+                    <div class="likes-container">
+                        <span class="material-icons">favorite</span>
+                        <p>{{imageObject.likes}} likes</p>
+                    </div>
                 </div>
                 <div class="tags-container text-font">
                     <p>Tags:</p>
@@ -27,10 +31,6 @@
                 </div>
             </div>
             <div class="actions-container">
-                <div class="likes-container">
-                    <span class="material-icons">favorite</span>
-                    <p>{{imageObject.likes}} likes</p>
-                </div>
                 <div class="buttons-container">
                     <button class="btn text-font" (click)="goBack()"><span class="material-icons">arrow_back_ios_new</span>Go Back</button>
                     <a class="no-text-dc" [href]="imageObject.links.download" download="imagen.jpg">
